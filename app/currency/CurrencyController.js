@@ -8,8 +8,9 @@ export class CurrencyController {
     this.createUI();
   }
 
+  //creating the service that consult the endpoint
   createService() {
-	  this._service = new CurrencyService();
+     this._service = new CurrencyService();
   }
 
   //declare the variable to access the UI and events listeners
@@ -22,23 +23,23 @@ export class CurrencyController {
   }
 
   convertClickHandler(evt) {
-  	evt.preventDefault();
+    evt.preventDefault();
 
-  	if (this._convertBtn.state == LoadingButton.LOADING)
-  		return;
+    if (this._convertBtn.state == LoadingButton.LOADING)
+      return;
 
-      this.showAmount();
+    this.showAmount();
   }
 
-  //request to the endpoint the currency conversion and update the UI
+   //request to the endpoint the currency conversion and update the UI
   async showAmount() {
-  	this._convertBtn.state = LoadingButton.LOADING;
+    this._convertBtn.state = LoadingButton.LOADING;
 
-  	var fromAmount = parseFloat(this._inputAmount.value);
-  	var toAmount = await this._service.convert(fromAmount, 'USD', 'BRL');
+    var fromAmount = parseFloat(this._inputAmount.value);
+    var toAmount = await this._service.convert(fromAmount, 'USD', 'BRL');
 
-  	this._message.textContent = `${fromAmount.toLocaleString('en-US')} USD = ${toAmount.toLocaleString('pt-BR')} BRL`;
+    this._message.textContent = `${fromAmount.toLocaleString('en-US')} USD = ${toAmount.toLocaleString('pt-BR')} BRL`;
 
-  	this._convertBtn.state = LoadingButton.READY;
+    this._convertBtn.state = LoadingButton.READY;
   }
 }
