@@ -1,0 +1,25 @@
+{
+  "name": "test-async",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "babel ./app/ --out-dir ./dist/",
+    "prepublish": "npm run build",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2017": "^6.16.0",
+    "electron": "^1.4.13",
+    "request": "^2.79.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "bootstrap": "^3.3.7"
+  }
+}

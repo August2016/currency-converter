@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container col-md-6 center" style="width:600">
+      <h1 class="center-block">Currency Converter</h1>
+      <div class="well center-block">
+        <form class="form-inline">
+          <div class="form-group col-md-offset-2 col-md-6">
+            <label class="sr-only" for="inputAmount">Amount (in dollars)</label>
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input type="number" class="form-control" id="inputAmount" placeholder="Amount">
+            </div>
+          </div>
+          <button class="btn btn-primary convert">Convert</button>
+        </form>
+      </div>
+      <div class="message"></div>
+    </div>
+    <script src="./dist/app.js"></script>
+  </body>
+</html>
