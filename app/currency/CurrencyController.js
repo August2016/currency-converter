@@ -31,7 +31,7 @@ export class CurrencyController {
     this.showAmount();
   }
 
-   //request to the endpoint the currency conversion and update the UI
+  //request to the endpoint the currency conversion and update the UI
   async showAmount() {
     this._convertBtn.state = LoadingButton.LOADING;
 
