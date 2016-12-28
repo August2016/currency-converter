@@ -1,6 +1,3 @@
-import request from "request";
-import "babel-polyfill";
-
 export class CurrencyService {
   constructor() {
   }
