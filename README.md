@@ -6,3 +6,6 @@ Simple applicaton using electron + babel + es6
 -npm install<br />
 -npm run build<br />
 -npm start
+
+## Binaries
+Win: <a href="">Wind32 x64</a>
