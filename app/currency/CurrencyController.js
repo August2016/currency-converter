@@ -1,6 +1,5 @@
 import {LoadingButton} from '../Common/LoadingButton'
 import {CurrencyService} from './CurrencyService'
-import "babel-polyfill";
 
 export class CurrencyController {
   constructor() {
