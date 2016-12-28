@@ -1,4 +1,4 @@
-# currency-convertor
+# currency-converter
 Simple applicaton using electron + babel + es6
 
 ## How to use
