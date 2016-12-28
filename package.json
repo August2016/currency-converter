@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "build": "babel ./app/ --out-dir ./dist/",
-    "prepublish": "npm run build",
+    "package-mac": "electron-packager . CurrencyConverter --platform=darwin --arch=all",
+    "package-win": "electron-packager . CurrencyConverter --platform=win32 --arch=x64",
+	"package-all": "npm run build && npm run package-win && npm run package-mac",
     "start": "electron ."
   },
   "author": "Tiago Schmitt",
@@ -15,8 +17,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-es2017": "^6.16.0",
-    "electron": "^1.4.13",
-    "request": "^2.79.0"
+    "electron": "^1.4.13"
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
