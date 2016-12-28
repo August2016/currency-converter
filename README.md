@@ -8,4 +8,4 @@ Simple applicaton using electron + babel + es6
 -npm start
 
 ## Binaries
-Win: <a href="">Wind32 x64</a>
+Win: <a href="">Win32 x64</a>
